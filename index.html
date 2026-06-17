@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Thế Giới Di Động - Khuyến mãi online</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+    /* Tổng thể & Font chữ */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    /* Top Banner */
+    .top-banner-sale {
+      background-color: #e3001b;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Thanh Header chính (Màu vàng TGDĐ) */
+    .tgdd-header {
+      background-color: #ffd400;
+      padding: 10px 0;
+      border: none;
+      margin-bottom: 0;
+    }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo-container {
+      display: inline-flex;
+      align-items: flex-end;
+      text-decoration: none;
+    }
+    .logo-container:hover, .logo-container:focus {
+      text-decoration: none;
+    }
+   
+    .search-box {
+      width: 100% !important;
+      border-radius: 20px;
+      border: none;
+      height: 38px;
+      padding-left: 15px;
+      padding-right: 45px;
+      font-size: 13px;
+    }
+    .header-right-menu a {
+      color: #000;
+      margin-left: 20px;
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Thanh Menu Danh mục */
+    .tgdd-nav {
+      background-color: #ffd400;
+      border-top: 1px solid #e5be00;
+      margin-bottom: 15px;
+    }
+    .tgdd-nav .navbar-nav > li > a {
+      color: #000 !important;
+      font-size: 13px;
+      padding: 10px 12px;
+      font-weight: 500;
+    }
+    .tgdd-nav .navbar-nav > li > a:hover {
+      background-color: #fff !important;
+    }
+
+    /* Khung chứa Banner Kỷ Nguyên Mới - Đã căn giữa hợp lý */
+    .promo-banner-container {
+      margin-bottom: 20px;
+    }
+    .banner-center {
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      max-height: 350px; /* Giới hạn chiều cao tối đa để không đè màn hình */
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    /* Khung sản phẩm */
+    .product-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 15px;
+      position: relative;
+      border: 1px solid #fff;
+      transition: all 0.3s ease;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border: 1px solid #ffd400;
+    }
+    .badge-discount {
+      background-color: #eb5757;
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 2px 5px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .product-img {
+      max-height: 150px;
+      margin: 10px auto;
+      display: block;
+      object-fit: contain;
+    }
+    .product-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 5px;
+      height: 40px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .price-old {
+      text-decoration: line-through;
+      color: #666;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+    .price-new {
+      color: #d0021b;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* Flash Sale & Countdown */
+    .flash-sale-heading {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .countdown-box {
+      background-color: #f6911f;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .countdown-time {
+      background: #000;
+      padding: 2px 5px;
+      border-radius: 3px;
+      margin: 0 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-banner-sale">
+    <a href="#" style="display: block; width: 100%;">
+      <img src="thutu.png" alt="Thứ Tư Sale Sập Sàn" class="img-responsive" style="margin: 0 auto; width: 100%; max-height: 70px; object-fit: cover;">
+    </a>
+  </div>
+
+  <header class="tgdd-header">
+    <div class="container header-flex">
+      
+      <a href="#" class="logo-container">
+        <img src="logo.png" alt="The Gioi Di Dong" style="height: 60px; width: auto; margin-right: 2px;">
+      </a>
+      
+      <div class="search-container" style="width: 45%; position: relative; display: flex; align-items: center;">
+        <input type="text" class="form-control search-box" placeholder="Bạn tìm gì hôm nay... (Ví dụ: Vivo X100 Ultra)">
+        <button type="button" style="position: absolute; right: 5px; background: #333; color: #fff; border: none; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
+          <span class="glyphicon glyphicon-search" style="font-size: 12px;"></span>
+        </button>
+      </div>
+      
+      <div class="header-right-menu hidden-xs" style="display: flex; align-items: center;">
+        <a href="#"><span class="glyphicon glyphicon-user"></span> Đăng nhập</a>
+        <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Giỏ hàng</a>
+        <a href="#" style="background: rgba(0,0,0,0.05); padding: 5px 10px; border-radius: 15px;"><span class="glyphicon glyphicon-map-marker"></span> Hồ Chí Minh <span class="glyphicon glyphicon-menu-down" style="font-size: 10px;"></span></a>
+      </div>
+
+    </div>
+  </header>
+
+  <nav class="navbar tgdd-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tgddMenu" style="background-color: #000;">
+          <span class="icon-bar" style="background-color: #fff;"></span>
+          <span class="icon-bar" style="background-color: #fff;"></span>
+          <span class="icon-bar" style="background-color: #fff;"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="tgddMenu">
+        <ul class="nav navbar-nav">
+          <li><a href="#"><span class="glyphicon glyphicon-phone"></span> Điện thoại</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-laptop"></span> Laptop</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-headphones"></span> Phụ kiện</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-time"></span> Smartwatch</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-modal-window"></span> Tablet</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Máy cũ, Thu cũ</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-print"></span> Màn hình, Máy in</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <div class="promo-banner-container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <a href="#">
+            <img src="kynguyenmoi.jpg" class="img-responsive center-block banner-center" alt="Banner Kỷ Nguyên Mới">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-xs-12">
+        <span class="flash-sale-heading">Khuyến mãi online</span>
+        <div class="countdown-box pull-right">
+          Chỉ còn: 
+          <span class="countdown-time" id="hours">01</span>:
+          <span class="countdown-time" id="minutes">04</span>:
+          <span class="countdown-time" id="seconds">16</span>
+        </div>
+      </div>
+    </div>
+    <hr style="border-top: 2px solid #ffd400; margin-top: 5px;">
+
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <div class="product-card">
+          <span class="badge-discount">-44%</span>
+          <img src="https://via.placeholder.com/150x150?text=Huawei+Band" class="img-responsive product-img" alt="Huawei Band 10">
+          <div class="product-name">Vòng đeo tay thông minh Huawei Band 10</div>
+          <div class="price-old">1.070.000₫</div>
+          <div class="price-new">590.000₫</div>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+        <div class="product-card">
+          <span class="badge-discount">-52%</span>
+          <img src="https://via.placeholder.com/150x150?text=Quat+Mini" class="img-responsive product-img" alt="Quạt mini">
+          <div class="product-name">Quạt mini Hydrus JF-95</div>
+          <div class="price-old">190.000₫</div>
+          <div class="price-new">90.000₫</div>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+        <div class="product-card">
+          <span class="badge-discount">-44%</span>
+          <img src="https://via.placeholder.com/150x150?text=Casio" class="img-responsive product-img" alt="Casio">
+          <div class="product-name">Đồng hồ CASIO MTP-V006L-7BUDF</div>
+          <div class="price-old">1.005.000₫</div>
+          <div class="price-new">555.000₫</div>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+        <div class="product-card">
+          <span class="badge-discount">-10%</span>
+          <img src="https://via.placeholder.com/150x150?text=iPhone+15" class="img-responsive product-img" alt="iPhone 15">
+          <div class="product-name">iPhone 15 Pro Max 256GB Chính hãng</div>
+          <div class="price-old">34.990.000₫</div>
+          <div class="price-new">29.590.000₫</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="text-center" style="margin-top: 50px; background-color: #fff; padding: 30px; border-top: 1px solid #ddd;">
+    <p>© 2026 Công ty cổ phần Thế Giới Di Động. Phiên bản tái hiện giao diện mẫu.</p>
+  </footer>
+
+  <script>
+    function startCountdown() {
+      let hours = 1, minutes = 4, seconds = 16;
+      let timer = setInterval(() => {
+        if(seconds > 0) { 
+          seconds--; 
+        } else {
+          if(minutes > 0) { 
+            minutes--; 
+            seconds = 59; 
+          } else {
+            if(hours > 0) { 
+              hours--; 
+              minutes = 59; 
+              seconds = 59; 
+            } else {
+              clearInterval(timer);
+              return;
+            }
+          }
+        }
+        document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+        document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+        document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+      }, 1000);
+    }
+    window.onload = startCountdown;
+  </script>
+</body>
+</html>
